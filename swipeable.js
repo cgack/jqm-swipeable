@@ -18,7 +18,7 @@ $.widget( "cgack.swipeable", $.mobile.widget, {
 		swipeRight: ":jqmData(swipe='right')",
 		swipeBoth: ":jqmData(swipe='both')"
 	},
-	_create: function() 
+	_create: function() {
 
 		var $el = this.element,
 			o = this.options,
