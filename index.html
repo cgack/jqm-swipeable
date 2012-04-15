@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Extending jQuery Mobile</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.css" />
+	<link rel="stylesheet" href="./swipeable.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.js"></script>
+	<script src="./swipeable.js" ></script>
+<!--	<script src="http://jsconsole.com/remote.js?cgack"></script> -->
+</head> 
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Custom Widgets</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+					<div data-role="swipeable" data-swipe="right">
+					<h2>This is a swipeable element Swipe Right >>></h2>
+						<div data-role="controlgroup" data-type="horizontal">
+							<a data-role="button" href="#">One</a>
+							<a data-role="button" href="#">Two</a>
+							<a data-role="button" href="#">Three</a>
+						</div>
+						<p>This could be an awesome menu</p>
+					</div>
+					<div id="byID">
+						<h4>$.swipeable({ swipeLeft: true });</h4>
+						<h4>Hello Swipeable</h4>
+					</div>
+					<div data-role="swipeable" data-swipe="both">
+						<h2>Swipeable Both Directions</h2>
+						<div data-show="right">
+							<h3>Shown on Swipe Right</h3>
+						</div>
+						<div data-show="left">
+							<h3>Shown on Swipe Left</h3>
+						</div>
+					</div>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+<script>
+$( document ).ready(function() {
+	$( "#byID" ).swipeable({ swipeLeft: true });
+});
+</script>
+</body>
+</html>
