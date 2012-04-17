@@ -6,7 +6,7 @@
  */
 
 
-(function( $, undefined ) {
+;(function( $, undefined ) {
 
 $.widget( "cgack.swipeable", $.mobile.widget, {
 	options: {
